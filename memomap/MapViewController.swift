@@ -127,30 +127,12 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
                 }
             }
 
-            @objc func buttonEvent(_ sender: UIButton) {
-                self.performSegue(withIdentifier: "next", sender: nil)
-
-
-            }
-    
-            private func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-            switch status {
-            //許可されていない場合
-            case .notDetermined:
-                //許可を求める
-                manager.requestWhenInUseAuthorization()
-            //拒否されている場合
-            case .denied, .restricted:
-                break
-            //許可されている場合
-            case .authorizedAlways, .authorizedWhenInUse:
-                manager.startUpdatingLocation()
-                break
-
-            default:
-                break
-            }
+    @objc func buttonEvent(_ sender: UIButton) {
+            self.performSegue(withIdentifier: "next", sender: nil)
         }
+    
+            
+    
 
         // Do any additional setup after loading the view.
     }
