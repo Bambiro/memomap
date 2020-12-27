@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C05A083D258F1C33005602CC /* 人物のアイコン素材 その3.png in Resources */ = {isa = PBXBuildFile; fileRef = C05A0839258F1C33005602CC /* 人物のアイコン素材 その3.png */; };
+		C05A083E258F1C33005602CC /* 虫眼鏡のアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C05A083A258F1C33005602CC /* 虫眼鏡のアイコン.png */; };
+		C05A083F258F1C33005602CC /* 目的地アイコン4 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = C05A083B258F1C33005602CC /* 目的地アイコン4 (1).png */; };
+		C05A0845258F2859005602CC /* sharemap.png in Resources */ = {isa = PBXBuildFile; fileRef = C05A0841258F2859005602CC /* sharemap.png */; };
+		C05A0846258F2859005602CC /* mymap0.png in Resources */ = {isa = PBXBuildFile; fileRef = C05A0842258F2859005602CC /* mymap0.png */; };
+		C05A0847258F2859005602CC /* mymap.png in Resources */ = {isa = PBXBuildFile; fileRef = C05A0843258F2859005602CC /* mymap.png */; };
+		C05A0848258F2859005602CC /* sharemap0.png in Resources */ = {isa = PBXBuildFile; fileRef = C05A0844258F2859005602CC /* sharemap0.png */; };
+		C083ECC925970D7E001FB24E /* メモアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C083ECC825970D7E001FB24E /* メモアイコン.png */; };
+		C083ECD125972393001FB24E /* 自動車アイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C083ECCB25972392001FB24E /* 自動車アイコン.png */; };
+		C083ECD225972393001FB24E /* ショップアイコン4.png in Resources */ = {isa = PBXBuildFile; fileRef = C083ECCC25972392001FB24E /* ショップアイコン4.png */; };
+		C083ECD325972393001FB24E /* 電車アイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C083ECCD25972392001FB24E /* 電車アイコン.png */; };
+		C083ECD425972393001FB24E /* 飛行機の無料素材.png in Resources */ = {isa = PBXBuildFile; fileRef = C083ECCE25972392001FB24E /* 飛行機の無料素材.png */; };
+		C083ECD525972393001FB24E /* 東京スカイツリーの無料アイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C083ECCF25972392001FB24E /* 東京スカイツリーの無料アイコン.png */; };
+		C083ECD625972393001FB24E /* 車アイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C083ECD025972393001FB24E /* 車アイコン.png */; };
 		C0AA2E792568FAB800663E0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA2E782568FAB800663E0D /* AppDelegate.swift */; };
 		C0AA2E7B2568FAB800663E0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA2E7A2568FAB800663E0D /* SceneDelegate.swift */; };
 		C0AA2E7D2568FAB800663E0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA2E7C2568FAB800663E0D /* ViewController.swift */; };
@@ -19,6 +33,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C05A0839258F1C33005602CC /* 人物のアイコン素材 その3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物のアイコン素材 その3.png"; sourceTree = "<group>"; };
+		C05A083A258F1C33005602CC /* 虫眼鏡のアイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "虫眼鏡のアイコン.png"; sourceTree = "<group>"; };
+		C05A083B258F1C33005602CC /* 目的地アイコン4 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "目的地アイコン4 (1).png"; sourceTree = "<group>"; };
+		C05A0841258F2859005602CC /* sharemap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sharemap.png; sourceTree = "<group>"; };
+		C05A0842258F2859005602CC /* mymap0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mymap0.png; sourceTree = "<group>"; };
+		C05A0843258F2859005602CC /* mymap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mymap.png; sourceTree = "<group>"; };
+		C05A0844258F2859005602CC /* sharemap0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sharemap0.png; sourceTree = "<group>"; };
+		C083ECC825970D7E001FB24E /* メモアイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "メモアイコン.png"; sourceTree = "<group>"; };
+		C083ECCB25972392001FB24E /* 自動車アイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "自動車アイコン.png"; sourceTree = "<group>"; };
+		C083ECCC25972392001FB24E /* ショップアイコン4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ショップアイコン4.png"; sourceTree = "<group>"; };
+		C083ECCD25972392001FB24E /* 電車アイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "電車アイコン.png"; sourceTree = "<group>"; };
+		C083ECCE25972392001FB24E /* 飛行機の無料素材.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "飛行機の無料素材.png"; sourceTree = "<group>"; };
+		C083ECCF25972392001FB24E /* 東京スカイツリーの無料アイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "東京スカイツリーの無料アイコン.png"; sourceTree = "<group>"; };
+		C083ECD025972393001FB24E /* 車アイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "車アイコン.png"; sourceTree = "<group>"; };
 		C0AA2E752568FAB800663E0D /* memomap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memomap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0AA2E782568FAB800663E0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0AA2E7A2568FAB800663E0D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,11 +90,25 @@
 		C0AA2E772568FAB800663E0D /* memomap */ = {
 			isa = PBXGroup;
 			children = (
+				C083ECCC25972392001FB24E /* ショップアイコン4.png */,
+				C083ECCB25972392001FB24E /* 自動車アイコン.png */,
+				C083ECD025972393001FB24E /* 車アイコン.png */,
+				C083ECCD25972392001FB24E /* 電車アイコン.png */,
+				C083ECCF25972392001FB24E /* 東京スカイツリーの無料アイコン.png */,
+				C083ECCE25972392001FB24E /* 飛行機の無料素材.png */,
+				C083ECC825970D7E001FB24E /* メモアイコン.png */,
+				C05A0839258F1C33005602CC /* 人物のアイコン素材 その3.png */,
+				C05A083A258F1C33005602CC /* 虫眼鏡のアイコン.png */,
+				C05A083B258F1C33005602CC /* 目的地アイコン4 (1).png */,
 				C0AA2E782568FAB800663E0D /* AppDelegate.swift */,
 				C0AA2E7A2568FAB800663E0D /* SceneDelegate.swift */,
 				C0AA2E7C2568FAB800663E0D /* ViewController.swift */,
 				C0AA2E7E2568FAB800663E0D /* Main.storyboard */,
 				C0AA2E812568FABE00663E0D /* Assets.xcassets */,
+				C05A0843258F2859005602CC /* mymap.png */,
+				C05A0842258F2859005602CC /* mymap0.png */,
+				C05A0841258F2859005602CC /* sharemap.png */,
+				C05A0844258F2859005602CC /* sharemap0.png */,
 				C0AA2E832568FABE00663E0D /* LaunchScreen.storyboard */,
 				C0AA2E862568FABE00663E0D /* Info.plist */,
 				C0AA2E8C2571260300663E0D /* MapViewController.swift */,
@@ -134,9 +176,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C05A0845258F2859005602CC /* sharemap.png in Resources */,
+				C05A0846258F2859005602CC /* mymap0.png in Resources */,
+				C05A083E258F1C33005602CC /* 虫眼鏡のアイコン.png in Resources */,
+				C05A0847258F2859005602CC /* mymap.png in Resources */,
 				C0AA2E852568FABE00663E0D /* LaunchScreen.storyboard in Resources */,
+				C05A083F258F1C33005602CC /* 目的地アイコン4 (1).png in Resources */,
 				C0AA2E822568FABE00663E0D /* Assets.xcassets in Resources */,
+				C083ECD225972393001FB24E /* ショップアイコン4.png in Resources */,
+				C083ECD125972393001FB24E /* 自動車アイコン.png in Resources */,
+				C083ECD525972393001FB24E /* 東京スカイツリーの無料アイコン.png in Resources */,
 				C0AA2E802568FAB800663E0D /* Main.storyboard in Resources */,
+				C083ECD325972393001FB24E /* 電車アイコン.png in Resources */,
+				C083ECD425972393001FB24E /* 飛行機の無料素材.png in Resources */,
+				C05A083D258F1C33005602CC /* 人物のアイコン素材 その3.png in Resources */,
+				C083ECD625972393001FB24E /* 車アイコン.png in Resources */,
+				C083ECC925970D7E001FB24E /* メモアイコン.png in Resources */,
+				C05A0848258F2859005602CC /* sharemap0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

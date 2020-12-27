@@ -12,6 +12,8 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBOutlet weak var textField1: UITextField!
     @IBOutlet weak var textField2: UITextField!
+    @IBOutlet weak var textField3: UITextField!
+    @IBOutlet weak var textField4: UITextField!
     
     var pickerView1 = UIPickerView()
     var pickerView2 = UIPickerView()
@@ -23,22 +25,54 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var word1 = String()
     var word2 = String()
     
+    let image0 = UIImage(named: "mymap0.png")!
+    let image1 = UIImage(named: "mymap.png")!
+    let image2 = UIImage(named: "sharemap0.png")!
+    let image3 = UIImage(named: "sharemap.png")!
+   
     
+    @IBOutlet weak var mymapbutton: UIButton!
+    @IBOutlet weak var sharemapbutton: UIButton!
     
-    
-    
-    @IBOutlet weak var preservebutton: UIButton!
-    
-    @IBAction func mymapbutton(){
+    @IBAction func mymapButtonTapped(_ sender: Any){
+        if mymapbutton.imageView?.image == image0 {
+            mymapbutton.setImage(image1, for: .normal)
+        }else if mymapbutton.imageView?.image == image1{
+            mymapbutton.setImage(image0, for: .normal)
+        }
     }
-    @IBAction func sharemap(){
+    
+    @IBAction func sharemapButtonTapped(_ sender: Any){
+        if sharemapbutton.imageView?.image == image2{
+            sharemapbutton.setImage(image3, for: .normal)
+        }else if sharemapbutton.imageView?.image == image3{
+            sharemapbutton.setImage(image2, for: .normal)
+        }
     }
 
+    @IBOutlet weak var preservebutton: UIButton!
+    
+    @IBAction func preserveButtonTapped() {
+                // mapViewControllerの取得
+        if let mapVC = presentingViewController as? MapViewController{
+            //MapViewControllerのgenreにtextfieldの値を代入
+            mapVC.genre = textField3.text!
+            print(textField3.text)
+            print(mapVC.genre)
+        }
+                
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         createPickerView()
+        
+        //画像を設定
+        mymapbutton.setImage(image0, for: .normal)
+        sharemapbutton.setImage(image2, for: .normal)
+        
         
         //角丸
         preservebutton.layer.cornerRadius = 40.0
@@ -47,7 +81,6 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // Do any additional setup after loading the view.
     }
     
-
     
     func createPickerView() {
         
