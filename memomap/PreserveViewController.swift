@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,UITextFieldDelegate{
     
     @IBOutlet weak var textField1: UITextField!
     @IBOutlet weak var textField2: UITextField!
@@ -51,6 +51,7 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
 
     @IBOutlet weak var preservebutton: UIButton!
+    @IBOutlet weak var delatebutton: UIButton!
     
     @IBAction func preserveButtonTapped() {
                 // mapViewControllerの取得
@@ -59,10 +60,33 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             mapVC.genre = textField3.text!
             print(textField3.text)
             print(mapVC.genre)
+            
+            //MapViewControllerのsubtitleにtextfieldの値を代入
+            mapVC.subTitle = textField4.text!
+            print(textField4.text)
+            print(mapVC.subTitle)
+            
+            //MapViewControllerのpinBoolにtureを代入
+            mapVC.pinBool = true
+            
         }
                 
         self.dismiss(animated: true, completion: nil)
+        
     }
+    
+    @IBAction func delateBuuttonTapped() {
+            // mapViewControllerの取得
+        if let mapVC = presentingViewController as? MapViewController{
+            //ピンを削除
+            mapVC.mapView.removeAnnotation(mapVC.myPin)
+            
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,11 +99,38 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         
         //角丸
-        preservebutton.layer.cornerRadius = 40.0
+        preservebutton.layer.cornerRadius = 25.0
+        delatebutton.layer.cornerRadius = 25.0
     
         
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    @objc func keyboardWillShow(notifiction :NSNotification){
+    if let keyboardSize = (notifiction.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
+        //キーボードの高さを分Viewを上に移動する
+        if self.view.frame.origin.y == 0 {
+            self.view.frame.origin.y -= keyboardSize.height
+        }else {
+            let suggestionHeight = self.view.frame.origin.y + keyboardSize.height
+            self.view.frame.origin.y -= suggestionHeight
+        }
+    }
+}
+
+        //Viewの位置を戻す
+    @objc func keyboardWillHide(){
+    if self.view.frame.origin.y != 0{
+        self.view.frame.origin.y = 0
+        }
+    }
+
+    @objc func dissmissKeyboard(){
+       self.view.endEditing(true)
+    }
+    
     
     
     func createPickerView() {
@@ -108,16 +159,19 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     }
     
+    
     @objc func doneButton1(){
         textField1.endEditing(true)
         textField1.text = word1
         textField2.text = ""
     }
     
+    
     @objc func doneButton2() {
         textField2.endEditing(true)
         textField2.text = word2
         }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         textField1.endEditing(true)
@@ -125,10 +179,12 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 //テキスト入力画面の外側をタップしたら編集が終了
     }
     
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
         //1画面に対するクルクル(PickerView)の数
     }
+    
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         //候補の数
@@ -150,6 +206,7 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 }
             }
     
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
             if pickerView == pickerView1{
                 return data1[row]
@@ -167,6 +224,7 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 }
             }
         }
+    
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 
@@ -207,9 +265,6 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 }
 
             }
-    
-    
-
     }
     
     

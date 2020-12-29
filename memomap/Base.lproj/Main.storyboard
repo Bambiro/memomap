@@ -36,7 +36,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7d-ba-1IG">
-                                        <rect key="frame" x="133" y="19" width="44" height="44"/>
+                                        <rect key="frame" x="235" y="16" width="44" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="目的地アイコン4 (1).png"/>
                                         <connections>
@@ -44,7 +44,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kA2-bV-Dm0">
-                                        <rect key="frame" x="340" y="21" width="40" height="40"/>
+                                        <rect key="frame" x="29" y="18" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="人物のアイコン素材 その3.png"/>
                                     </button>
@@ -68,18 +68,18 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILI-a6-EI0">
+                                        <rect key="frame" x="140" y="18" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="メモアイコン.png"/>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWa-a7-185">
-                                        <rect key="frame" x="30" y="21" width="40" height="40"/>
+                                        <rect key="frame" x="338" y="18" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="虫眼鏡のアイコン.png"/>
                                         <connections>
                                             <segue destination="xan-gV-cgV" kind="presentation" modalPresentationStyle="fullScreen" id="Et4-Ra-KSb"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILI-a6-EI0">
-                                        <rect key="frame" x="239" y="23" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="メモアイコン.png"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9882352941176471" green="0.84313725490196079" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
@@ -110,7 +110,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5G-Me-Odw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="GUi-qn-n07"/>
+                <tapGestureRecognizer id="GUi-qn-n07">
+                    <connections>
+                        <action selector="mapViewDidTapWithSender:" destination="dR8-pg-jFR" id="rUf-ve-KEZ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1408.6956521739132" y="112.50000000000001"/>
         </scene>
@@ -131,7 +135,7 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="npP-Xm-XrB">
-                                <rect key="frame" x="28" y="180" width="360" height="70"/>
+                                <rect key="frame" x="28" y="195" width="360" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tsq-rX-LQr">
@@ -183,7 +187,7 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0o-ky-5C8">
-                                <rect key="frame" x="28" y="366" width="360" height="70"/>
+                                <rect key="frame" x="28" y="351" width="360" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L3e-0r-BDV">
@@ -199,7 +203,7 @@
                                         <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タイトル：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQo-OI-o5Z">
-                                        <rect key="frame" x="33" y="15" width="102" height="42"/>
+                                        <rect key="frame" x="32" y="16" width="102" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -209,7 +213,7 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nzx-x4-3fE">
-                                <rect key="frame" x="28" y="460" width="360" height="70"/>
+                                <rect key="frame" x="28" y="429" width="360" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Zr-5i-kge">
@@ -225,10 +229,17 @@
                                         <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="メモ：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PV4-zU-csz">
-                                        <rect key="frame" x="51" y="12" width="67" height="42"/>
+                                        <rect key="frame" x="26" y="14" width="62" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(日付•コメントなど)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEp-il-ARe">
+                                        <rect key="frame" x="26" y="50" width="95" height="12"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -244,18 +255,6 @@
                                     <action selector="mymapButtonTapped:" destination="0fE-Kv-mA8" eventType="touchUpInside" id="OdR-CU-fcu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aY0-Oz-drz">
-                                <rect key="frame" x="137" y="580" width="140" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98823529409999999" green="0.84313725490000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Preserve">
-                                    <color key="titleColor" red="0.0" green="0.67450980390000004" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="preserveButtonTapped" destination="0fE-Kv-mA8" eventType="touchUpInside" id="0lB-5z-ETk"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15B-D2-R9M">
                                 <rect key="frame" x="223" y="88" width="140" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -266,15 +265,36 @@
                                     <action selector="sharemapButtonTapped:" destination="0fE-Kv-mA8" eventType="touchUpInside" id="K2M-PE-Baf"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="電車アイコン.png" translatesAutoresizingMaskIntoConstraints="NO" id="cgC-9i-RoJ">
-                                <rect key="frame" x="28" y="659" width="59" height="57"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aY0-Oz-drz">
+                                <rect key="frame" x="122" y="552" width="170" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.84313725490000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="保存する">
+                                    <color key="titleColor" red="0.0" green="0.67450980390000004" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="preserveButtonTapped" destination="0fE-Kv-mA8" eventType="touchUpInside" id="0lB-5z-ETk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRo-VC-A6C">
+                                <rect key="frame" x="122" y="636" width="170" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.84313725490000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="ピンを削除">
+                                    <color key="titleColor" red="0.0" green="0.67450980390000004" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="delateBuuttonTapped" destination="0fE-Kv-mA8" eventType="touchUpInside" id="ACo-Hp-cfT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ch6-51-TjB"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
+                        <outlet property="delatebutton" destination="cRo-VC-A6C" id="xO7-tU-0xk"/>
                         <outlet property="mymapbutton" destination="3it-lh-yoD" id="Fab-i3-jnv"/>
                         <outlet property="preservebutton" destination="aY0-Oz-drz" id="8Fi-CT-dH8"/>
                         <outlet property="sharemapbutton" destination="15B-D2-R9M" id="KAz-6c-rcf"/>
@@ -286,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VgA-oI-6Ja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2296" y="113"/>
+            <point key="canvasLocation" x="2295.6521739130435" y="112.50000000000001"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="vcs-Ut-Lnd">
@@ -305,7 +325,7 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vCr-V1-TY0">
-                                <rect key="frame" x="27" y="274" width="360" height="70"/>
+                                <rect key="frame" x="27" y="313" width="360" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Guf-jh-Ayb">
@@ -331,7 +351,7 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28E-6c-4P2">
-                                <rect key="frame" x="27" y="362" width="360" height="70"/>
+                                <rect key="frame" x="27" y="407" width="360" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gVw-ia-Fr0">
@@ -357,7 +377,7 @@
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nzm-IE-G4G">
-                                <rect key="frame" x="27" y="182" width="360" height="70"/>
+                                <rect key="frame" x="27" y="220" width="360" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ozs-ab-gvT">
@@ -401,24 +421,28 @@
                                 <rect key="frame" x="254" y="650" width="59" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="自動車アイコン.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vt1-ke-qLb">
-                                <rect key="frame" x="20" y="659" width="59" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9x-lR-3hk">
-                                <rect key="frame" x="137" y="521" width="140" height="80"/>
+                                <rect key="frame" x="122" y="560" width="170" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.84313725490000002" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Search">
+                                <state key="normal" title="調べる">
                                     <color key="titleColor" red="0.0" green="0.68235294117647061" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="searchButtonTapped" destination="xan-gV-cgV" eventType="touchUpInside" id="pCi-hS-yvD"/>
+                                </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="自動車アイコン.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vt1-ke-qLb">
+                                <rect key="frame" x="20" y="679" width="59" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jLX-kR-DRN"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
+                        <outlet property="searchbutton" destination="X9x-lR-3hk" id="3d2-NM-CXL"/>
                         <outlet property="textField1" destination="Guf-jh-Ayb" id="09Z-U4-CIU"/>
                         <outlet property="textField2" destination="gVw-ia-Fr0" id="HhU-t7-sto"/>
                         <outlet property="textField3" destination="ozs-ab-gvT" id="5Mf-W3-1ZV"/>
@@ -426,11 +450,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B2Q-F4-DoC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2997" y="113"/>
+            <point key="canvasLocation" x="2296" y="837"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="3hL-ll-gxX"/>
+        <segue reference="Ktq-VZ-Wdm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="mymap0.png" width="2399.52001953125" height="1080"/>
@@ -442,7 +466,6 @@
         <image name="目的地アイコン4 (1).png" width="256" height="256"/>
         <image name="自動車アイコン.png" width="256" height="256"/>
         <image name="虫眼鏡のアイコン.png" width="256" height="256"/>
-        <image name="電車アイコン.png" width="256" height="256"/>
         <image name="飛行機の無料素材.png" width="256" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -15,9 +15,17 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     var pointAno = MKPointAnnotation()
     var locationManager: CLLocationManager!
     var genre = "タイトル"
-    var subTitle = "サブタイトル"
+    var subTitle = "メモ"
+    var pinBool: Bool = false
+    var radiusBool: Bool = false
+    var radius = Int()
+    var number = Int()
+    
+    // ピンを生成
+    let myPin: MKPointAnnotation = MKPointAnnotation()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
     }
@@ -54,75 +62,44 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
         myLongPress.addTarget(self, action: #selector(MapViewController.recognizeLongPress(sender:)))
         
         //myMapに長押し機能を追加
-        mapView.addGestureRecognizer(myLongPress)
+        if pinBool == true {
+            mapView.addGestureRecognizer(myLongPress)
+        }
     }
     
+    
     @objc func recognizeLongPress(sender: UILongPressGestureRecognizer) {
-
-                    // 長押しの最中に何度もピンを生成しないようにする.
-                    if sender.state != UIGestureRecognizer.State.began {
-                        return
-                    }
-
-                    // 長押しした地点の座標を取得.
-                    let location = sender.location(in: mapView)
-
-                    // locationをCLLocationCoordinate2Dに変換.
-                    let myCoordinate: CLLocationCoordinate2D = mapView.convert(location, toCoordinateFrom: mapView)
-
-                    // ピンを生成.
-                    let myPin: MKPointAnnotation = MKPointAnnotation()
-
-                    // 座標を設定.
-                    myPin.coordinate = myCoordinate
-
-                    // タイトルを設定.
-                    myPin.title = genre
-
-                    // サブタイトルを設定.
-                    myPin.subtitle = subTitle
-
-                    // MapViewにピンを追加.
-                    mapView.addAnnotation(myPin)
-                }
+        
     
-//    @objc func recognizeLongPress(sender: UILongPressGestureRecognizer) {
-//
-//        // 長押しの最中に何度もピンを生成しないようにする.
-//        if sender.state != UIGestureRecognizer.State.began {
-//            return
-//        }
-//
-//        // 長押しした地点の座標を取得.
-//        let location = sender.location(in: mapView)
-//
-//
-//
-//
-//    }
+        if pinBool == true {
+            // 長押しの最中に何度もピンを生成しないようにする.
+            if sender.state != UIGestureRecognizer.State.began {
+                return
+            }
+
+            // 長押しした地点の座標を取得.
+            let location = sender.location(in: mapView)
+
+            // locationをCLLocationCoordinate2Dに変換.
+            let myCoordinate: CLLocationCoordinate2D = mapView.convert(location, toCoordinateFrom: mapView)
+
+            // 座標を設定.
+            myPin.coordinate = myCoordinate
+
+            // タイトルを設定.
+            myPin.title = genre
+
+            // サブタイトルを設定.
+            myPin.subtitle = subTitle
+
+            // MapViewにピンを追加.
+            mapView.addAnnotation(myPin)
+            //ピンを追加したらそれ以上ピンを打てないようにする
+            pinBool = false
+        }
+    }
     
-    
-//    func addMapNotation(location: CGPoint, genre: String, subTitle: String){
-//        // locationをCLLocationCoordinate2Dに変換.
-//        let myCoordinate: CLLocationCoordinate2D = mapView.convert(location, toCoordinateFrom: mapView)
-//
-//        // ピンを生成.
-//        let myPin: MKPointAnnotation = MKPointAnnotation()
-//
-//        // 座標を設定.
-//        myPin.coordinate = myCoordinate
-//
-//        // タイトルを設定.
-//        myPin.title = genre
-//
-//        // サブタイトルを設定.
-//        myPin.subtitle = subTitle
-//
-//        // MapViewにピンを追加.
-//        mapView.addAnnotation(myPin)
-//
-//    }
-    
+
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         let myPinIdentifier = "PinAnnotationIdentifier"
@@ -135,6 +112,14 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
         //コールアウト(吹き出し)の表示
         myPinView.canShowCallout = true
         
+        //左ボタンをアノテーションビューに追加する。
+                let button = UIButton()
+        button.frame = CGRect(x: 0,y: 0,width: 40,height: 40)
+        button.setTitle("色", for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.backgroundColor = UIColor(red: 15/255, green: 110/255, blue: 164/255, alpha: 1)
+                myPinView.leftCalloutAccessoryView = button
+
         //annnotationの設定
         myPinView.annotation = annotation
         
@@ -145,6 +130,23 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
         
         return myPinView
     }
+    
+    
+    //吹き出しアクササリー押下時の呼び出しメソッド
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+            
+            if(control == view.leftCalloutAccessoryView) {
+                
+                //左のボタンが押された場合はピンの色をランダムに変更する。
+                if let pinView = view as? MKPinAnnotationView {
+                    pinView.pinTintColor = UIColor(red: CGFloat(drand48()),
+                            green: CGFloat(drand48()),
+                            blue: CGFloat(drand48()),
+                            alpha: 1.0)
+                }
+            }
+        }
+    
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
@@ -165,26 +167,49 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
         }
     }
     
+    
     @objc func buttonEvent(_ sender: UIButton) {
         self.performSegue(withIdentifier: "next", sender: nil)
     }
     
     
     @IBAction func mapViewDidTap(sender: UITapGestureRecognizer) {
+        //長押し機能
+        let myLongPress: UILongPressGestureRecognizer =  UILongPressGestureRecognizer()
+        myLongPress.addTarget(self, action: #selector(MapViewController.recognizeLongPress(sender:)))
+        
         if sender.state == UIGestureRecognizer.State.ended {
             let tapPoint = sender.location(in: view)
             let center = mapView.convert(tapPoint, toCoordinateFrom: mapView)
-            let circle = MKCircle(center: center, radius: 100)//半径100m　1分＝80m
+          
+                //numaberをもとに半径を指定
+                if number == 0{
+                    radius = 400
+                }else if number == 1{
+                    radius = 800
+                }else if number == 2{
+                    radius = 1200
+                }else if number == 3{
+                    radius = 1200
+                }
+
+            let circle = MKCircle(center: center, radius: CLLocationDistance(radius)) //半径100m　1分＝80m
             
-            mapView.addOverlay(circle)
+            //myMapに徒歩圏内機能を追加
+            if radiusBool == true {
+                mapView.addOverlay(circle)
+                radiusBool = false
+            }
+
         }
+        
     }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let circleRenderer : MKCircleRenderer = MKCircleRenderer(overlay: overlay);
-        circleRenderer.strokeColor = UIColor.red
-        circleRenderer.fillColor = UIColor(red: 0.0, green: 0.0, blue: 0.7, alpha: 0.5)
-        circleRenderer.lineWidth = 1.0
+        circleRenderer.strokeColor = UIColor(red: 15/255, green: 110/255, blue: 164/255, alpha: 1)
+        circleRenderer.fillColor = UIColor(red: 0/255, green: 174/255, blue: 192/255, alpha: 0.2)
+        circleRenderer.lineWidth = 2.0
         return circleRenderer
     }
     
@@ -202,5 +227,6 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
  // Pass the selected object to the new view controller.
  }
  */
+
 
 
