@@ -29,6 +29,7 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     let image1 = UIImage(named: "mymap.png")!
     let image2 = UIImage(named: "sharemap0.png")!
     let image3 = UIImage(named: "sharemap.png")!
+    
    
     
     @IBOutlet weak var mymapbutton: UIButton!
@@ -132,6 +133,17 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     
+    func textEnabled(){
+            //TextField1,TextField2のどちらかが空のときの処理
+                textField3.isEnabled == false //TextField3の編集を無効にする
+                textField4.isEnabled == false //TextField4の編集を無効にする
+            if textField1.text != "" && textField2.text != ""{
+                //TextField1,TextField2のどちらも値が入っているときの処理
+                textField3.isEnabled == true //TextField3の編集を有効にする
+                textField4.isEnabled == true //TextField4の編集を有効にする
+           }
+    }
+    
     
     func createPickerView() {
         
@@ -176,6 +188,8 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         textField1.endEditing(true)
         textField2.endEditing(true)
+        textField3.endEditing(true)
+        textField4.endEditing(true)
                 //テキスト入力画面の外側をタップしたら編集が終了
     }
     

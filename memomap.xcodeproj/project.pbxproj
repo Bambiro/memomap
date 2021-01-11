@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0121A98259B01F500D999B9 /*  iconのコピー.png in Resources */ = {isa = PBXBuildFile; fileRef = C0121A97259B01F500D999B9 /*  iconのコピー.png */; };
 		C05A083D258F1C33005602CC /* 人物のアイコン素材 その3.png in Resources */ = {isa = PBXBuildFile; fileRef = C05A0839258F1C33005602CC /* 人物のアイコン素材 その3.png */; };
 		C05A083E258F1C33005602CC /* 虫眼鏡のアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C05A083A258F1C33005602CC /* 虫眼鏡のアイコン.png */; };
 		C05A083F258F1C33005602CC /* 目的地アイコン4 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = C05A083B258F1C33005602CC /* 目的地アイコン4 (1).png */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0121A97259B01F500D999B9 /*  iconのコピー.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = " iconのコピー.png"; sourceTree = "<group>"; };
 		C05A0839258F1C33005602CC /* 人物のアイコン素材 その3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物のアイコン素材 その3.png"; sourceTree = "<group>"; };
 		C05A083A258F1C33005602CC /* 虫眼鏡のアイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "虫眼鏡のアイコン.png"; sourceTree = "<group>"; };
 		C05A083B258F1C33005602CC /* 目的地アイコン4 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "目的地アイコン4 (1).png"; sourceTree = "<group>"; };
@@ -71,6 +73,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0121A9B25ABDA0B00D999B9 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				C083ECCC25972392001FB24E /* ショップアイコン4.png */,
+				C0121A97259B01F500D999B9 /*  iconのコピー.png */,
+				C083ECCB25972392001FB24E /* 自動車アイコン.png */,
+				C083ECD025972393001FB24E /* 車アイコン.png */,
+				C083ECCD25972392001FB24E /* 電車アイコン.png */,
+				C083ECCF25972392001FB24E /* 東京スカイツリーの無料アイコン.png */,
+				C083ECCE25972392001FB24E /* 飛行機の無料素材.png */,
+				C083ECC825970D7E001FB24E /* メモアイコン.png */,
+				C05A0839258F1C33005602CC /* 人物のアイコン素材 その3.png */,
+				C05A083A258F1C33005602CC /* 虫眼鏡のアイコン.png */,
+				C05A083B258F1C33005602CC /* 目的地アイコン4 (1).png */,
+			);
+			path = icon;
+			sourceTree = "<group>";
+		};
 		C0AA2E6C2568FAB800663E0D = {
 			isa = PBXGroup;
 			children = (
@@ -90,16 +110,7 @@
 		C0AA2E772568FAB800663E0D /* memomap */ = {
 			isa = PBXGroup;
 			children = (
-				C083ECCC25972392001FB24E /* ショップアイコン4.png */,
-				C083ECCB25972392001FB24E /* 自動車アイコン.png */,
-				C083ECD025972393001FB24E /* 車アイコン.png */,
-				C083ECCD25972392001FB24E /* 電車アイコン.png */,
-				C083ECCF25972392001FB24E /* 東京スカイツリーの無料アイコン.png */,
-				C083ECCE25972392001FB24E /* 飛行機の無料素材.png */,
-				C083ECC825970D7E001FB24E /* メモアイコン.png */,
-				C05A0839258F1C33005602CC /* 人物のアイコン素材 その3.png */,
-				C05A083A258F1C33005602CC /* 虫眼鏡のアイコン.png */,
-				C05A083B258F1C33005602CC /* 目的地アイコン4 (1).png */,
+				C0121A9B25ABDA0B00D999B9 /* icon */,
 				C0AA2E782568FAB800663E0D /* AppDelegate.swift */,
 				C0AA2E7A2568FAB800663E0D /* SceneDelegate.swift */,
 				C0AA2E7C2568FAB800663E0D /* ViewController.swift */,
@@ -179,6 +190,7 @@
 				C05A0845258F2859005602CC /* sharemap.png in Resources */,
 				C05A0846258F2859005602CC /* mymap0.png in Resources */,
 				C05A083E258F1C33005602CC /* 虫眼鏡のアイコン.png in Resources */,
+				C0121A98259B01F500D999B9 /*  iconのコピー.png in Resources */,
 				C05A0847258F2859005602CC /* mymap.png in Resources */,
 				C0AA2E852568FABE00663E0D /* LaunchScreen.storyboard in Resources */,
 				C05A083F258F1C33005602CC /* 目的地アイコン4 (1).png in Resources */,
@@ -351,7 +363,6 @@
 		C0AA2E8A2568FABE00663E0D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WCSAU8TRBJ;
 				INFOPLIST_FILE = memomap/Info.plist;
@@ -370,7 +381,6 @@
 		C0AA2E8B2568FABE00663E0D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WCSAU8TRBJ;
 				INFOPLIST_FILE = memomap/Info.plist;
