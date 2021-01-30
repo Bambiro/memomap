@@ -36,13 +36,13 @@ class SearchViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         let mapViewController = presentingViewController as? MapViewController
         //徒歩何分圏内かによってそれぞれnumberに判定値を代入
         if textField3.text == data6[0]{
-            mapViewController?.number = 1
+            mapViewController?.number = 0
         }else if textField3.text == data6[1]{
-            mapViewController?.number = 2
+            mapViewController?.number = 1
         }else if textField3.text == data6[2]{
-            mapViewController?.number = 3
+            mapViewController?.number = 2
         }else if textField3.text == data6[3]{
-            mapViewController?.number = 4
+            mapViewController?.number = 3
         }
         
         //MapViewControllerのradiusBoolにtureを代入
@@ -140,23 +140,24 @@ class SearchViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         //候補の数
         if pickerView == pickerView1{
-            return data1.count
-        }else if pickerView == pickerView3{
-            return data6.count
-        }else {
-            if textField1.text == data1[0]{
-                return data2.count
-                
-            }else if textField1.text == data1[1]{
-                return data3.count
-                
-            }else if textField1.text == data1[2]{
-                return data4.count
-                
-            }else{
-                return data5.count
-            }
+                return data1.count
+            }else if pickerView == pickerView3{
+                return data6.count
+            }else {
+                if textField1.text == data1[0]{
+                    return data2.count
+
+                }else if textField1.text == data1[1]{
+                    return data3.count
+
+                }else if textField1.text == data1[2]{
+                    return data4.count
+
+                }else{
+                    return data5.count
+                }
         }
+        
     }
     
     

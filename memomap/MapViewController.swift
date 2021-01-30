@@ -68,6 +68,15 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "next"{
+                let preserveVC = segue.destination as! PreserveViewController
+                preserveVC.latitude = myPin.coordinate.latitude
+                preserveVC.longitude = myPin.coordinate.longitude
+            }
+    }
+    
+    
     @objc func recognizeLongPress(sender: UILongPressGestureRecognizer) {
         
     
@@ -190,7 +199,7 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
                 }else if number == 2{
                     radius = 1200
                 }else if number == 3{
-                    radius = 1200
+                    radius = 2400
                 }
 
             let circle = MKCircle(center: center, radius: CLLocationDistance(radius)) //半径100m　1分＝80m

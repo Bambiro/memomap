@@ -25,6 +25,9 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var word1 = String()
     var word2 = String()
     
+    var latitude = Double()
+    var longitude = Double()
+    
     let image0 = UIImage(named: "mymap0.png")!
     let image1 = UIImage(named: "mymap.png")!
     let image2 = UIImage(named: "sharemap0.png")!
@@ -43,14 +46,51 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
     }
     
+    
     @IBAction func sharemapButtonTapped(_ sender: Any){
         if sharemapbutton.imageView?.image == image2{
             sharemapbutton.setImage(image3, for: .normal)
         }else if sharemapbutton.imageView?.image == image3{
             sharemapbutton.setImage(image2, for: .normal)
+            shareMap()
         }
+
     }
 
+    func shareMap(){
+            let address = String(format: "%f,%f", latitude, longitude)
+
+            let urlString = "http://maps.apple.com/?address=\(address)"
+            //マップの種類の変更可(&t = m or k or h or r)
+
+            let encodedUrl = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+
+            let url = NSURL(string: encodedUrl)!
+
+            //UIApplication.shared.open(url as URL, options: [UIApplication.OpenExternalURLOptionsKey.universalLinksOnly: true], completionHandler: nil)
+
+            //UIApplication.shared.open(URL(string: encodedUrl)!, options: [:], completionHandler: nil)
+            print(latitude)
+            print(longitude)
+            print(urlString)
+
+            //ここからシェア内容
+            let shareText = "ここがすごい！"
+            let shareWebsite = url
+            //let shareImage = UIImage(named: "ムック5.png")!
+
+            let activityItems = [shareText, shareWebsite] as [Any]
+            //shareImageの追加も可
+
+            // 初期化処理
+            let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+
+
+            // UIActivityViewControllerを表示
+            self.present(activityVC, animated: true, completion: nil)
+
+        }
+    
     @IBOutlet weak var preservebutton: UIButton!
     @IBOutlet weak var delatebutton: UIButton!
     
