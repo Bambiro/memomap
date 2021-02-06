@@ -48,14 +48,14 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     
     @IBAction func sharemapButtonTapped(_ sender: Any){
-        if sharemapbutton.imageView?.image == image2{
-            sharemapbutton.setImage(image3, for: .normal)
-        }else if sharemapbutton.imageView?.image == image3{
-            sharemapbutton.setImage(image2, for: .normal)
+        if sharemapbutton.imageView?.image == image3{
             shareMap()
+        }else {
+            //何もしない
         }
 
     }
+    
 
     func shareMap(){
             let address = String(format: "%f,%f", latitude, longitude)

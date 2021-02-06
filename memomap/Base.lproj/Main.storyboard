@@ -35,46 +35,26 @@
                                 <rect key="frame" x="0.0" y="650" width="414" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7d-ba-1IG">
-                                        <rect key="frame" x="235" y="16" width="44" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="目的地アイコン4 (1).png"/>
-                                        <connections>
-                                            <segue destination="0fE-Kv-mA8" kind="presentation" modalPresentationStyle="fullScreen" id="3hL-ll-gxX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kA2-bV-Dm0">
-                                        <rect key="frame" x="29" y="18" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="人物のアイコン素材 その3.png"/>
-                                    </button>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0k-4w-xdA">
                                         <rect key="frame" x="0.0" y="76" width="414" height="10"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.058823529411764705" green="0.43137254901960786" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOj-tA-UMD">
-                                        <rect key="frame" x="308" y="8" width="2" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIO-XM-ZYg">
                                         <rect key="frame" x="206" y="8" width="2" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mMk-rq-VYr">
-                                        <rect key="frame" x="105" y="8" width="2" height="60"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7d-ba-1IG">
+                                        <rect key="frame" x="89" y="14" width="44" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILI-a6-EI0">
-                                        <rect key="frame" x="140" y="18" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="メモアイコン.png"/>
+                                        <state key="normal" backgroundImage="目的地アイコン4 (1).png"/>
+                                        <connections>
+                                            <segue destination="0fE-Kv-mA8" kind="presentation" modalPresentationStyle="fullScreen" id="3hL-ll-gxX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWa-a7-185">
-                                        <rect key="frame" x="338" y="18" width="40" height="40"/>
+                                        <rect key="frame" x="294" y="18" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="虫眼鏡のアイコン.png"/>
                                         <connections>
@@ -460,8 +440,6 @@
         <image name="mymap0.png" width="2399.52001953125" height="1080"/>
         <image name="sharemap0.png" width="2399.52001953125" height="1080"/>
         <image name="ショップアイコン4.png" width="256" height="256"/>
-        <image name="メモアイコン.png" width="256" height="256"/>
-        <image name="人物のアイコン素材 その3.png" width="256" height="256"/>
         <image name="東京スカイツリーの無料アイコン.png" width="256" height="256"/>
         <image name="目的地アイコン4 (1).png" width="256" height="256"/>
         <image name="自動車アイコン.png" width="256" height="256"/>
