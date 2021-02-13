@@ -8,6 +8,15 @@
 
 import UIKit
 
+// mapUserDefaultsの内容
+var saveMap: UserDefaults = UserDefaults.standard
+var categoryArray :[String] = []
+var genreArray :[String] = []
+var titleArray :[String] = []
+var memoArray :[String] = []
+var latitudeArray :[Double] = []
+var longitudeArray :[Double] = []
+
 class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,UITextFieldDelegate{
     
     @IBOutlet weak var textField1: UITextField!
@@ -27,6 +36,9 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     var latitude = Double()
     var longitude = Double()
+    
+    var saveMemo: UserDefaults = UserDefaults.standard
+    var memoArray :[String] = []
     
     let image0 = UIImage(named: "mymap0.png")!
     let image1 = UIImage(named: "mymap.png")!
@@ -95,25 +107,41 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var delatebutton: UIButton!
     
     @IBAction func preserveButtonTapped() {
-                // mapViewControllerの取得
-        if let mapVC = presentingViewController as? MapViewController{
-            //MapViewControllerのgenreにtextfieldの値を代入
-            mapVC.genre = textField3.text!
-            print(textField3.text)
-            print(mapVC.genre)
-            
-            //MapViewControllerのsubtitleにtextfieldの値を代入
-            mapVC.subTitle = textField4.text!
-            print(textField4.text)
-            print(mapVC.subTitle)
-            
-            //MapViewControllerのpinBoolにtureを代入
-            mapVC.pinBool = true
-            
-        }
-                
-        self.dismiss(animated: true, completion: nil)
-        
+        if latitude == 0.00{
+            preserve()
+                    // mapViewControllerの取得
+                    if let mapVC = presentingViewController as? MapViewController{
+                        //MapViewControllerのgenreにtextfieldの値を代入
+                        mapVC.genre = textField3.text!
+                        print(textField3.text as Any)
+                        print(mapVC.genre)
+
+                        //MapViewControllerのsubtitleにtextfieldの値を代入
+                        mapVC.subTitle = textField4.text!
+                        print(textField4.text as Any)
+                        print(mapVC.subTitle)
+
+                        //MapViewControllerのpinBoolにtrueを代入
+                        mapVC.pinBool = true
+
+                    }
+
+                    if textField1.text == "" || textField2.text == "" || textField3.text == "" || textField4.text == ""{
+                        alert()
+                    }
+                    
+                    
+                    else{
+                        self.dismiss(animated: true, completion: nil)
+                    }
+
+                    preserve()
+
+                }else{
+                    //値が渡されて保存するとき保存するメソッド
+                    mapPreserve()
+                    self.dismiss(animated: true, completion: nil)
+                }
     }
     
     @IBAction func delateBuuttonTapped() {
@@ -133,6 +161,7 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         super.viewDidLoad()
         
         createPickerView()
+        textEnabled()
         
         //画像を設定
         mymapbutton.setImage(image0, for: .normal)
@@ -142,6 +171,17 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         //角丸
         preservebutton.layer.cornerRadius = 25.0
         delatebutton.layer.cornerRadius = 25.0
+        
+        if latitude != 0.00 {
+                    print(latitude)
+                    sharemapbutton.setImage(image3, for: .normal)
+                    delatebutton.isHidden = false
+                    preservebutton.setTitle("保存する", for: .normal)
+                }else{
+                    sharemapbutton.setImage(image2, for: .normal)
+                    delatebutton.isHidden = true
+                    preservebutton.setTitle("ピンを置く", for: .normal)
+                }
     
         
         // Do any additional setup after loading the view.
@@ -174,14 +214,14 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     
     func textEnabled(){
-            //TextField1,TextField2のどちらかが空のときの処理
-                textField3.isEnabled == false //TextField3の編集を無効にする
-                textField4.isEnabled == false //TextField4の編集を無効にする
-            if textField1.text != "" && textField2.text != ""{
-                //TextField1,TextField2のどちらも値が入っているときの処理
-                textField3.isEnabled == true //TextField3の編集を有効にする
-                textField4.isEnabled == true //TextField4の編集を有効にする
-           }
+        //TextField1,TextField2のどちらかが空のときの処理
+        textField3.isEnabled = false//TextField3の編集を無効にする
+        textField4.isEnabled = false//TextField4の編集を無効にする
+        if textField1.text != "" && textField2.text != ""{
+            //TextField1,TextField2のどちらも値が入っているときの処理
+            textField3.isEnabled = true//TextField3の編集を有効にする
+            textField4.isEnabled = true//TextField4の編集を有効にする
+        }
     }
     
     
@@ -216,12 +256,14 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         textField1.endEditing(true)
         textField1.text = word1
         textField2.text = ""
+        textEnabled()
     }
     
     
     @objc func doneButton2() {
         textField2.endEditing(true)
         textField2.text = word2
+        textEnabled()
         }
     
     
@@ -319,6 +361,67 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 }
 
             }
+    
+    
+    func alert(){
+            let alert = UIAlertController(title: "タイトル", message: "本文", preferredStyle: .alert)
+            alert.addAction(
+                UIAlertAction(
+                    title: "OK",
+                    style: .default,
+                    handler: { action in
+                        print("OK")
+                    }
+                )
+            )
+            present(alert, animated: true, completion: nil)
+
+        }
+    
+    
+    func preserve(){
+            memoArray.append(textField1.text!)
+            memoArray.append(textField2.text!)
+            memoArray.append(textField3.text!)
+            memoArray.append(textField4.text!)
+            print(memoArray)
+
+            saveMemo.setValue(memoArray, forKey: "memo")
+        }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+            if latitude == 0.00{
+
+            }else{
+                memoArray = saveMemo.object(forKey: "memo") as! [String]
+
+                textField1.text = memoArray[0]
+                textField2.text = memoArray[1]
+                textField3.text = memoArray[2]
+                textField4.text = memoArray[3]
+            }
+        }
+    
+    func mapPreserve(){
+
+            categoryArray.append(textField1.text!)
+            genreArray.append(textField2.text!)
+            titleArray.append(textField3.text!)
+            memoArray.append(textField4.text!)
+            latitudeArray.append(latitude)
+            longitudeArray.append(longitude)
+
+            saveMap.setValue(categoryArray, forKey: "category")
+            saveMap.setValue(genreArray, forKey: "genre")
+            saveMap.setValue(titleArray, forKey: "title")
+            saveMap.setValue(memoArray, forKey: "memo")
+            saveMap.setValue(latitudeArray, forKey: "latitude")
+            saveMap.setValue(longitudeArray, forKey: "longitude")
+
+            //print(titleArray)
+        }
+    
     }
     
     

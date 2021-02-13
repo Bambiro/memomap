@@ -18,8 +18,15 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     var subTitle = "メモ"
     var pinBool: Bool = false
     var radiusBool: Bool = false
+    var loaded: Bool = false
     var radius = Int()
     var number = Int()
+    
+    var loadLatitude = [Double]()
+    var loadLongitude = [Double]()
+    var loadTitle = [String]()
+    var loadMemo = [String]()
+    //var loaded: Bool!
     
     // ピンを生成
     let myPin: MKPointAnnotation = MKPointAnnotation()
@@ -85,24 +92,40 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
             if sender.state != UIGestureRecognizer.State.began {
                 return
             }
-
+            
             // 長押しした地点の座標を取得.
             let location = sender.location(in: mapView)
-
+            
             // locationをCLLocationCoordinate2Dに変換.
             let myCoordinate: CLLocationCoordinate2D = mapView.convert(location, toCoordinateFrom: mapView)
-
+            
             // 座標を設定.
             myPin.coordinate = myCoordinate
-
+            
             // タイトルを設定.
             myPin.title = genre
-
+            
             // サブタイトルを設定.
             myPin.subtitle = subTitle
-
-            // MapViewにピンを追加.
-            mapView.addAnnotation(myPin)
+            
+            if loaded == false{
+                // MapViewにピンを追加.
+                mapView.addAnnotation(myPin)
+                
+            }else if loaded == true{
+                for i in 0..<loadLatitude.count{
+                    addAnnotation(latitude: loadLatitude[i],longitude: loadLongitude[i],title: loadTitle[i],subtitle: loadMemo[i])
+                }
+                loaded = false
+            }
+            
+            // 長押しの最中に何度もピンを生成しないようにする.
+            if sender.state != UIGestureRecognizer.State.began {
+                return
+            }
+            
+            print(myPin.coordinate.latitude)
+            print(myPin.coordinate.longitude)
             //ピンを追加したらそれ以上ピンを打てないようにする
             pinBool = false
         }
@@ -221,6 +244,31 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
         circleRenderer.lineWidth = 2.0
         return circleRenderer
     }
+    
+    
+    //検索用メソッド
+        func addAnnotation( latitude: CLLocationDegrees,longitude: CLLocationDegrees,title:String, subtitle:String) {
+
+            // ピンの生成
+            let annotation = MKPointAnnotation()
+
+            // 緯度経度を指定
+            annotation.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+
+            // タイトル、サブタイトルを設定
+            annotation.title = title
+            annotation.subtitle = subtitle
+
+            let btn = UIButton(type: .detailDisclosure)
+
+            btn.addTarget(self, action: #selector(buttonEvent(_:)), for: UIControl.Event.touchUpInside)
+
+
+            // mapViewに追加
+            mapView.addAnnotation(annotation)
+        }
+    
+    
     
     
     // Do any additional setup after loading the view.
