@@ -88,10 +88,6 @@ class MapViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDel
         
     
         if pinBool == true {
-            // 長押しの最中に何度もピンを生成しないようにする.
-            if sender.state != UIGestureRecognizer.State.began {
-                return
-            }
             
             // 長押しした地点の座標を取得.
             let location = sender.location(in: mapView)

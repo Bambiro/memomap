@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0121A98259B01F500D999B9 /*  iconのコピー.png in Resources */ = {isa = PBXBuildFile; fileRef = C0121A97259B01F500D999B9 /*  iconのコピー.png */; };
-		C05A083D258F1C33005602CC /* 人物のアイコン素材 その3.png in Resources */ = {isa = PBXBuildFile; fileRef = C05A0839258F1C33005602CC /* 人物のアイコン素材 その3.png */; };
+		C0121AA225D7E31800D999B9 /* iPhoneSE.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0121AA125D7E31700D999B9 /* iPhoneSE.storyboard */; };
+		C0121AA525D7E33100D999B9 /* iPhone8plus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0121AA425D7E33100D999B9 /* iPhone8plus.storyboard */; };
+		C0121AA825D7E34C00D999B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0121AA725D7E34C00D999B9 /* LaunchScreen.storyboard */; };
+		C0121AAB25D7E35D00D999B9 /* iPhone11pro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0121AAA25D7E35D00D999B9 /* iPhone11pro.storyboard */; };
+		C0121AAE25D7E36C00D999B9 /* iPhone12.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0121AAD25D7E36C00D999B9 /* iPhone12.storyboard */; };
+		C0121AB125D7E37D00D999B9 /* iPhone12proMax.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0121AB025D7E37D00D999B9 /* iPhone12proMax.storyboard */; };
+		C0121AB425D7E39B00D999B9 /* iPadpro9.7.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0121AB325D7E39B00D999B9 /* iPadpro9.7.storyboard */; };
+		C0121AB725D7E3A900D999B9 /* iPad8.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0121AB625D7E3A900D999B9 /* iPad8.storyboard */; };
+		C0121ABA25D7E3B800D999B9 /* iPad10.5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0121AB925D7E3B800D999B9 /* iPad10.5.storyboard */; };
+		C0121ABD25D7E3C800D999B9 /* iPad4G.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0121ABC25D7E3C800D999B9 /* iPad4G.storyboard */; };
+		C0121AC025D7E3DA00D999B9 /* iPadpro11.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0121ABF25D7E3DA00D999B9 /* iPadpro11.storyboard */; };
+		C0121AC325D7E3EB00D999B9 /* iPadpro12.9.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0121AC225D7E3EB00D999B9 /* iPadpro12.9.storyboard */; };
 		C05A083E258F1C33005602CC /* 虫眼鏡のアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C05A083A258F1C33005602CC /* 虫眼鏡のアイコン.png */; };
 		C05A083F258F1C33005602CC /* 目的地アイコン4 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = C05A083B258F1C33005602CC /* 目的地アイコン4 (1).png */; };
 		C05A0845258F2859005602CC /* sharemap.png in Resources */ = {isa = PBXBuildFile; fileRef = C05A0841258F2859005602CC /* sharemap.png */; };
 		C05A0846258F2859005602CC /* mymap0.png in Resources */ = {isa = PBXBuildFile; fileRef = C05A0842258F2859005602CC /* mymap0.png */; };
 		C05A0847258F2859005602CC /* mymap.png in Resources */ = {isa = PBXBuildFile; fileRef = C05A0843258F2859005602CC /* mymap.png */; };
 		C05A0848258F2859005602CC /* sharemap0.png in Resources */ = {isa = PBXBuildFile; fileRef = C05A0844258F2859005602CC /* sharemap0.png */; };
-		C083ECC925970D7E001FB24E /* メモアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C083ECC825970D7E001FB24E /* メモアイコン.png */; };
 		C083ECD125972393001FB24E /* 自動車アイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C083ECCB25972392001FB24E /* 自動車アイコン.png */; };
 		C083ECD225972393001FB24E /* ショップアイコン4.png in Resources */ = {isa = PBXBuildFile; fileRef = C083ECCC25972392001FB24E /* ショップアイコン4.png */; };
-		C083ECD325972393001FB24E /* 電車アイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C083ECCD25972392001FB24E /* 電車アイコン.png */; };
 		C083ECD425972393001FB24E /* 飛行機の無料素材.png in Resources */ = {isa = PBXBuildFile; fileRef = C083ECCE25972392001FB24E /* 飛行機の無料素材.png */; };
 		C083ECD525972393001FB24E /* 東京スカイツリーの無料アイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C083ECCF25972392001FB24E /* 東京スカイツリーの無料アイコン.png */; };
 		C083ECD625972393001FB24E /* 車アイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C083ECD025972393001FB24E /* 車アイコン.png */; };
@@ -35,6 +43,18 @@
 
 /* Begin PBXFileReference section */
 		C0121A97259B01F500D999B9 /*  iconのコピー.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = " iconのコピー.png"; sourceTree = "<group>"; };
+		C0121AA125D7E31700D999B9 /* iPhoneSE.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhoneSE.storyboard; sourceTree = "<group>"; };
+		C0121AA425D7E33100D999B9 /* iPhone8plus.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone8plus.storyboard; sourceTree = "<group>"; };
+		C0121AA725D7E34C00D999B9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C0121AAA25D7E35D00D999B9 /* iPhone11pro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone11pro.storyboard; sourceTree = "<group>"; };
+		C0121AAD25D7E36C00D999B9 /* iPhone12.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone12.storyboard; sourceTree = "<group>"; };
+		C0121AB025D7E37D00D999B9 /* iPhone12proMax.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhone12proMax.storyboard; sourceTree = "<group>"; };
+		C0121AB325D7E39B00D999B9 /* iPadpro9.7.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPadpro9.7.storyboard; sourceTree = "<group>"; };
+		C0121AB625D7E3A900D999B9 /* iPad8.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPad8.storyboard; sourceTree = "<group>"; };
+		C0121AB925D7E3B800D999B9 /* iPad10.5.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPad10.5.storyboard; sourceTree = "<group>"; };
+		C0121ABC25D7E3C800D999B9 /* iPad4G.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPad4G.storyboard; sourceTree = "<group>"; };
+		C0121ABF25D7E3DA00D999B9 /* iPadpro11.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPadpro11.storyboard; sourceTree = "<group>"; };
+		C0121AC225D7E3EB00D999B9 /* iPadpro12.9.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPadpro12.9.storyboard; sourceTree = "<group>"; };
 		C05A0839258F1C33005602CC /* 人物のアイコン素材 その3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物のアイコン素材 その3.png"; sourceTree = "<group>"; };
 		C05A083A258F1C33005602CC /* 虫眼鏡のアイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "虫眼鏡のアイコン.png"; sourceTree = "<group>"; };
 		C05A083B258F1C33005602CC /* 目的地アイコン4 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "目的地アイコン4 (1).png"; sourceTree = "<group>"; };
@@ -115,6 +135,18 @@
 				C0AA2E7A2568FAB800663E0D /* SceneDelegate.swift */,
 				C0AA2E7C2568FAB800663E0D /* ViewController.swift */,
 				C0AA2E7E2568FAB800663E0D /* Main.storyboard */,
+				C0121AA125D7E31700D999B9 /* iPhoneSE.storyboard */,
+				C0121AA425D7E33100D999B9 /* iPhone8plus.storyboard */,
+				C0121AA725D7E34C00D999B9 /* LaunchScreen.storyboard */,
+				C0121AAA25D7E35D00D999B9 /* iPhone11pro.storyboard */,
+				C0121AAD25D7E36C00D999B9 /* iPhone12.storyboard */,
+				C0121AB025D7E37D00D999B9 /* iPhone12proMax.storyboard */,
+				C0121AB325D7E39B00D999B9 /* iPadpro9.7.storyboard */,
+				C0121AB625D7E3A900D999B9 /* iPad8.storyboard */,
+				C0121AB925D7E3B800D999B9 /* iPad10.5.storyboard */,
+				C0121ABC25D7E3C800D999B9 /* iPad4G.storyboard */,
+				C0121ABF25D7E3DA00D999B9 /* iPadpro11.storyboard */,
+				C0121AC225D7E3EB00D999B9 /* iPadpro12.9.storyboard */,
 				C0AA2E812568FABE00663E0D /* Assets.xcassets */,
 				C05A0843258F2859005602CC /* mymap.png */,
 				C05A0842258F2859005602CC /* mymap0.png */,
@@ -188,22 +220,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				C05A0845258F2859005602CC /* sharemap.png in Resources */,
+				C0121ABA25D7E3B800D999B9 /* iPad10.5.storyboard in Resources */,
 				C05A0846258F2859005602CC /* mymap0.png in Resources */,
+				C0121AB425D7E39B00D999B9 /* iPadpro9.7.storyboard in Resources */,
 				C05A083E258F1C33005602CC /* 虫眼鏡のアイコン.png in Resources */,
-				C0121A98259B01F500D999B9 /*  iconのコピー.png in Resources */,
 				C05A0847258F2859005602CC /* mymap.png in Resources */,
 				C0AA2E852568FABE00663E0D /* LaunchScreen.storyboard in Resources */,
 				C05A083F258F1C33005602CC /* 目的地アイコン4 (1).png in Resources */,
 				C0AA2E822568FABE00663E0D /* Assets.xcassets in Resources */,
+				C0121AC325D7E3EB00D999B9 /* iPadpro12.9.storyboard in Resources */,
 				C083ECD225972393001FB24E /* ショップアイコン4.png in Resources */,
 				C083ECD125972393001FB24E /* 自動車アイコン.png in Resources */,
 				C083ECD525972393001FB24E /* 東京スカイツリーの無料アイコン.png in Resources */,
+				C0121AA225D7E31800D999B9 /* iPhoneSE.storyboard in Resources */,
+				C0121AB125D7E37D00D999B9 /* iPhone12proMax.storyboard in Resources */,
 				C0AA2E802568FAB800663E0D /* Main.storyboard in Resources */,
-				C083ECD325972393001FB24E /* 電車アイコン.png in Resources */,
+				C0121ABD25D7E3C800D999B9 /* iPad4G.storyboard in Resources */,
 				C083ECD425972393001FB24E /* 飛行機の無料素材.png in Resources */,
-				C05A083D258F1C33005602CC /* 人物のアイコン素材 その3.png in Resources */,
+				C0121AC025D7E3DA00D999B9 /* iPadpro11.storyboard in Resources */,
+				C0121AAE25D7E36C00D999B9 /* iPhone12.storyboard in Resources */,
+				C0121AB725D7E3A900D999B9 /* iPad8.storyboard in Resources */,
+				C0121AA525D7E33100D999B9 /* iPhone8plus.storyboard in Resources */,
+				C0121AAB25D7E35D00D999B9 /* iPhone11pro.storyboard in Resources */,
 				C083ECD625972393001FB24E /* 車アイコン.png in Resources */,
-				C083ECC925970D7E001FB24E /* メモアイコン.png in Resources */,
+				C0121AA825D7E34C00D999B9 /* LaunchScreen.storyboard in Resources */,
 				C05A0848258F2859005602CC /* sharemap0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

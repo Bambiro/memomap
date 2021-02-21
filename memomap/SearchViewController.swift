@@ -72,7 +72,7 @@ class SearchViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         super.viewDidLoad()
         
         createPickerView()
-        textEnabled()
+//        textEnabled()
         
         
         //角丸
@@ -120,35 +120,35 @@ class SearchViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
     }
     
-    func textEnabled(){
-        //TextField1,TextField2のどちらかが空のときの処理
-        textField3.isEnabled = false//TextField3の編集を無効にする
-        if textField1.text != "" && textField2.text != ""{
-        //TextField1,TextField2のどちらも値が入っているときの処理
-            textField3.isEnabled = true//TextField3の編集を有効にする
-
-        }
-    }
+//    func textEnabled(){
+//        //TextField1,TextField2のどちらかが空のときの処理
+//        textField3.isEnabled = false//TextField3の編集を無効にする
+//        if textField1.text != "" && textField2.text != ""{
+//        //TextField1,TextField2のどちらも値が入っているときの処理
+//            textField3.isEnabled = true//TextField3の編集を有効にする
+//
+//        }
+//    }
     
     @objc func doneButton1(){
         textField1.endEditing(true)
         textField1.text = word1
         textField2.text = ""
-        textEnabled()
+//        textEnabled()
     }
     
     
     @objc func doneButton2() {
         textField2.endEditing(true)
         textField2.text = word2
-        textEnabled()
+//        textEnabled()
     }
     
     
     @objc func doneButton3() {
         textField3.endEditing(true)
         textField3.text = word3
-        textEnabled()
+//        textEnabled()
     }
     
     
@@ -292,7 +292,7 @@ class SearchViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     
     func alert(){
-            let alert = UIAlertController(title: "タイトル", message: "本文", preferredStyle: .alert)
+            let alert = UIAlertController(title: "検索できません", message: "すべての項目を埋めてください", preferredStyle: .alert)
             alert.addAction(
                 UIAlertAction(
                     title: "OK",

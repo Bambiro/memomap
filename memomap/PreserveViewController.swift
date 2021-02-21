@@ -87,7 +87,7 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             print(urlString)
 
             //ここからシェア内容
-            let shareText = "ここがすごい！"
+            let shareText = "Share map"
             let shareWebsite = url
             //let shareImage = UIImage(named: "ムック5.png")!
 
@@ -364,7 +364,7 @@ class PreserveViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     
     func alert(){
-            let alert = UIAlertController(title: "タイトル", message: "本文", preferredStyle: .alert)
+            let alert = UIAlertController(title: "保存できません", message: "すべての項目を埋めてください", preferredStyle: .alert)
             alert.addAction(
                 UIAlertAction(
                     title: "OK",
